@@ -1,0 +1,42 @@
+<!-- <h2>my name is{{name}} and my age is {{age}}</h2>
+<button (click)="calling()" >
+    send 
+</button> -->
+<!-- <input placeholder="name please" [(ngModel)]="name">
+<h1>you enterd {{name}}</h1>
+
+<input placeholder="name please" [(ngModel)]="age">
+<h3>age is {{age}}</h3> -->
+<!-- <p *ngFor='let name of cricketers'>
+    {{name}}
+</p> -->
+<!-- <h2 *ngIf='abc'>
+    hellooo
+</h2>
+<button (click)='abc=!abc'>click</button> -->
+<table border="1px" style="width: 750px;">
+    <tr>
+        <td>
+            name
+        </td>
+        <td>
+            age
+        </td>
+        <td>
+            plgeggedgd
+        </td>
+    </tr>
+    <tr *ngFor='let player of cricketers'>
+        <td>
+            {{player.name}}
+            <img src="{{player.image}}">
+        </td>
+        <td>
+            {{player.age}}
+        </td>
+        <td>
+            {{player.place}}
+        </td>
+    </tr>
+</table>
+

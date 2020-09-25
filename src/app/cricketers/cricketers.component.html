@@ -1,0 +1,36 @@
+<button (click)='ind=true;aus=false;wi=false'>India team</button>
+<button (click)='ind=false;aus=true;wi=false'>Australia team</button>
+<button (click)='ind=false;aus=false;wi=true'>WI team</button>
+<div *ngIf='ind'>
+    <div style="display: inline-flex;" *ngFor='let biodata of IndCricketers'>
+        <div style="background-color: burlywood;margin: 5px;">
+            <img src="{{biodata.image}}" width="300px" height="300px">
+            <p> name:{{biodata.name}}</p>
+            <p>age:{{biodata.age}}</p>
+            <p>testRuns:{{biodata.testRuns}}</p>
+            <p>odiRuns:{{biodata.odiRuns}}</p>
+        </div>
+    </div>
+</div>
+<div *ngIf='aus'>
+    <div style="display: inline-flex;" *ngFor='let akhil of Auscricketers'>
+        <div style="background-color: burlywood;margin: 5px;">
+            <img src="{{akhil.image}}" width="300px" height="300px">
+            <p> name:{{akhil.name}}</p>
+            <p>age:{{akhil.age}}</p>
+            <p>testRuns:{{akhil.testRuns}}</p>
+            <p>odiRuns:{{akhil.odiRuns}}</p>
+        </div>
+    </div>
+</div>
+<div *ngIf='wi'>
+    <div style="display: inline-flex;" *ngFor='let windies of Wicricketers'>
+        <div style="background-color: burlywood;margin: 5px;">
+            <img src="{{windies.image}}" width="300px" height="300px">
+            <p> name:{{windies.name}}</p>
+            <p>age:{{windies.age}}</p>
+            <p>testRuns:{{windies.testRuns}}</p>
+            <p>odiRuns:{{windies.odiRuns}}</p>
+        </div>
+    </div>
+</div>

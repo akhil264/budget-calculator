@@ -1,0 +1,87 @@
+import { Component, OnInit } from '@angular/core';
+import { relative } from 'path';
+import { summaryFileName } from '@angular/compiler/src/aot/util';
+
+
+@Component({
+  selector: 'app-akhil',
+  templateUrl: './akhil.component.html',
+  styleUrls: ['./akhil.component.css']
+})
+export class AkhilComponent implements OnInit {
+  
+  c:any = [];
+  d:any=[];
+  z:number;
+  totalAmount: number;
+  item: string;
+  ip: any=[];
+  ip1:any=[];
+  ip2:string;
+  nameOfItem: string;
+  incomes: any=[];
+  expensivesSum:number;
+  
+  incomeItemNames: any = [];
+  expensives: any = [];
+  expensivesItemNames: any = [];
+  // onAdd(){
+  //   this.amount.valueOf()
+  //   this.item.includes.name
+  // }
+  constructor() { }
+
+  ngOnInit() {
+
+  }
+  addFunc() {
+    this.ip={'price':this.ip1,
+     'itemName': this.ip2}
+  //   if (this.ip.price > 0) {
+  //     this.incomes.push(this.ip)
+  //    this.c= this.ip1
+  
+  //     console.log(this.incomes)
+  //   } else{
+  //   this.expensives.push(this.ip)
+  // this.d = this.ip1
+  //     console.log(this.expensives)
+  //   }
+    if (this.ip.price > 0) {
+      this.incomes.push(this.ip.price)
+      this.incomeItemNames.push(this.ip.itemName)    }
+    else {
+      this.expensives.push(this.ip.price)
+      this.expensivesItemNames.push(this.ip.itemName)
+    }
+
+    
+
+    var incomesSum = this.incomes.reduce(function (a, b) {
+      return a + b;
+    }, 0);
+    var expensivesSum = this.expensives.reduce(function (a, b) {
+      return a + b;
+    }, 0);
+    
+    this.totalAmount = incomesSum + expensivesSum
+    console.log(   this.incomes)
+    // console.log("two" + this.expensives)
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+  //   this.c = this.c++;
+  //  this.d = this.d++;
+  //  this.z = this.c+this.d;
+  //  this.totalAmount = this.z
+ 
+  
+  }
+}
+

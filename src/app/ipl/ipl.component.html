@@ -1,0 +1,72 @@
+<button (click)='mi=true;csk=false;rcb=false'>MI</button><br>
+<button (click)='mi=false;csk=true;rcb=false'>CSK</button><br>
+<button (click)='mi=false;csk=false;rcb=true'>RCB</button>
+<div *ngIf='mi==true'>
+<div>
+<h1>MI IPL SCHEDULE</h1>
+<table >
+    <tr>
+     <th>S.NO</th>   
+    <th>MATCH CENTER</th>
+    <th>DATE</th>
+    <th>DAY</th>
+    <th>TIME</th>
+    <th>STADIUM</th>
+</tr>
+<tr *ngFor='let data of mumbaiCricket'>
+    <td>{{data.sno}}</td>
+    <td>{{data.matchCenter}}</td>
+    <td>{{data.date}}</td>
+    <td>{{data.day}}</td>
+    <td>{{data.time}}</td>
+    <td>{{data.place}}</td>
+</tr>
+</table>
+</div>
+</div>
+<div *ngIf='csk==true'>
+<div>
+<h1>CSK IPL SCHEDULE</h1>
+<table >
+    <tr>
+     <th>S.NO</th>   
+    <th>MATCH CENTER</th>
+    <th>DATE</th>
+    <th>DAY</th>
+    <th>TIME</th>
+    <th>STADIUM</th>
+</tr>
+<tr *ngFor='let akhil of cskCricket'>
+    <td>{{akhil.sno}}</td>
+    <td>{{akhil.matchCenter}}</td>
+    <td>{{akhil.date}}</td>
+    <td>{{akhil.day}}</td>
+    <td>{{akhil.time}}</td>
+    <td>{{akhil.place}}</td>
+</tr>
+</table>
+</div>
+</div>
+<div *ngIf='rcb==true'>
+<div>
+<h1>RCB IPL SCHEDULE</h1>
+<table >
+    <tr>
+     <th>S.NO</th>   
+    <th>MATCH CENTER</th>
+    <th>DATE</th>
+    <th>DAY</th>
+    <th>TIME</th>
+    <th>STADIUM</th>
+</tr>
+<tr *ngFor='let akhil of rcbbCricket'>
+    <td>{{akhil.sno}}</td>
+    <td>{{akhil.matchCenter}}</td>
+    <td>{{akhil.date}}</td>
+    <td>{{akhil.day}}</td>
+    <td>{{akhil.time}}</td>
+    <td>{{akhil.place}}</td>
+</tr>
+</table>
+</div>
+</div>

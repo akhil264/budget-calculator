@@ -1,0 +1,20 @@
+table{
+    margin-left: 300px;
+    
+    background-color:black;
+    text-align: center;
+    color: red;
+    padding: 2px;
+    
+}
+td{
+    border: 1px solid white;
+}
+h1{
+    margin-left: 450px;
+    background-color: chartreuse;
+    text-align: center;
+    padding: 2px;
+    width: 500px;
+
+}

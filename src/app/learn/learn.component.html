@@ -1,0 +1,26 @@
+<!-- <input 
+type="text"
+class="form-control"
+(input)="onUpdate($event)">
+<ul>
+    <li>{{serverName}}</li>
+</ul>
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onAdd()">ADD</button>
+<p>{{allowNewServer}}</p>
+<p>{{serverV}}</p> -->
+
+
+
+
+<label>User Name</label>
+<input type="text" [(ngModel)]="username">
+<p>{{ username }}</p>
+<button class="btn btn-primary" [disabled]="username===''" (click)="onAdd()">Add Server</button>
+<p *ngIf="serverWasCreated;else noServer">{{serverName}}</p>
+<ng-template #noServer> 
+<p>no server was created</p>
+</ng-template>
+<p>{{serverV}}</p>
+
+
+

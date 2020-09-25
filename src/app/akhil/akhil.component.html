@@ -1,0 +1,81 @@
+<div class="top-bar">
+<h1 class="top-bar-h1">BUDGET CALCULATOR</h1>
+</div>
+<section class="total-budget-section" 
+>
+<h2 class="top-h2" >{{ totalAmount }}</h2>
+</section>
+<div class="container">
+
+    <div class="row">
+        <div class="col">
+            <input type="number"  [(ngModel)]="ip1"   placeholder="amount" class="form-control">
+        </div>
+        <div class="col">
+            <input type="text"  [(ngModel)]="ip2" (enter)="addFunc()"   placeholder="name of item" class="form-control"  >
+        </div>
+        <div class="col">
+            <button type="button"  (click)="addFunc()" class="btn btn-primary ">Add</button>
+        </div>
+      </div>
+    
+
+    <!-- <input [(ngModel)]="ip1" type="number" placeholder="amount"> -->
+   
+    <!-- <input [(ngModel)]="ip2" type="text" placeholder="name of item"> -->
+   
+    <!-- <button (click)="addFunc()" class="btn btn-primary">Add</button> -->
+    
+</div>
+<!-- <div class="card" style="height: 500px;width: 500px;">
+    <h3 class="income" >INCOME</h3>
+   
+  <div *ngFor="let income of incomes" >
+      <p>{{income.price}} , {{income.itemName}}</p>
+  </div>
+   
+    
+</div> -->
+
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card border-success">
+            <div class="card-header" style="text-align: center;color: green;">INCOME</div>
+            <div class="card-body text-success">
+              <h5 class="card-title" *ngFor="let income of incomes"
+              style="text-align: center;">{{income.price}} <span style="color:yellow;">(rs):</span>
+              {{income.itemName}} <button (click)="deleteIC(income)" class="btn" *ngIf="incomes != 0">
+                <img src="assets/delere.png" style="height: 30px;width: 30px;">
+              </button></h5> 
+            </div>
+          </div>
+      </div>
+      <div class="col">
+        <div class="card border-danger">
+            <div class="card-header" style="text-align: center;color: red;">EXPENSE</div>
+            <div class="card-body text-danger">
+              <h5 class="card-title" *ngFor="let expensive of expensives" style="text-align: center;">{{expensive.price}} 
+                <span style="color:rosybrown;">(rs):</span> {{expensive.itemName}}
+                <button (click)="deleteEP(expensive)" class="btn" *ngIf="expensives != 0">
+                  <img src="assets/delere.png" style="height: 30px;width: 30px;">
+                </button>
+              </h5>
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+  
+
+<!-- <div class="card" style="height: 500px;width: 500px; margin-left: 550px;margin-top: -500px;">
+    <h3 class="expense">EXPENSE</h3>
+    <div *ngFor="let expensive of expensives">
+        <p>{{expensive.price}} , {{expensive.itemName}}</p>
+    </div>
+</div> -->
+
+
+
+
