@@ -7,5 +7,14 @@ body{ padding: 20px;}
 /* Custom.scss
 Option A: Include all of Bootstrap */
 
+body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+  
+  h1, h2 {
+    text-align: center;
+  }
+
 
 
